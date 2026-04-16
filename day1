@@ -1,0 +1,7 @@
+sudo -i
+apt-get update
+apt  install docker.io -y
+docker -v
+
+docker run -d --restart unless-stopped --name win11react -p   3000:3000 blueedge/win11react:latest
+docker ps
