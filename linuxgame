@@ -1,0 +1,142 @@
+    1  ls
+    2  cd /
+    3  ls
+    4  hostname
+    5  cd ~
+    6  hostname
+    7  hostname -i
+    8  curl ifconfig.me
+    9  uname
+   10  ls
+   11  pwd
+   12  cd 
+   13  less
+   14  man
+   15  man man
+   16  who
+   17  whoami
+   18  head -n 5 abc
+   19  ps
+   20  wget
+   21  top
+   22  cat
+   23  more
+   24  cat /etc/os-release
+   25  who
+   26  uname -a
+   27  sudo
+   28  top
+   29  uptime
+   30  free
+   31  last
+   32  ps
+   33  df
+   34  df -h
+   35  du
+   36  ping
+   37  who
+   38  locate
+   39  mkdir myfiles
+   40  ls
+   41  tar -cvf allfiles.tar myfiles
+   42  ls
+   43  tar -xvf allfiles.tar
+   44  ls
+   45  rm myfiles
+   46  ls
+   47  del myfiles
+   48  rmdir my files
+   49  rmdir myfiles
+   50  ls
+   51  rmdir allfiles
+   52  ls
+   53  rmdir allfiles.tar
+   54  ls
+   55  cat etc/password
+   56  cat etc/passwd
+   57  cat etc
+   58  cd etc
+   59  cd /etc
+   60  ls
+   61  ls pwd
+   62  cat /passwd
+   63  cd /
+   64  cd ~
+   65  ls
+   66  cat /etc/passwd
+   67  cd /etc/shadow
+   68  cat /etc/shadow
+   69  passwd
+   70  ls
+   71  pwd
+   72  chmod 755 allfiles.tar
+   73  ls
+   74  id
+   75  passwd
+   76  snap list
+   77  netstat
+   78  free -h
+   79  ps -ef
+   80  history
+   81  top
+   82  df -h
+   83  ls
+   84  cd /
+   85  ls
+   86  pwd
+   87  ls -l
+   88  clear
+   89  ls
+   90  cd 
+   91  ls
+   92  cd var
+   93  cd/var
+   94  cd /var
+   95  ls
+   96  pwd
+   97  ls
+   98  cd /var/log
+   99  ls
+  100  cd ..
+  101  ls
+  102  ls -l
+  103  cd var
+  104  ls
+  105  cd log
+  106  ls
+  107  cat auth.log
+  108  clear
+  109  cat auth.log | grep error
+  110  clear
+  111  tail auth.log
+  112  tail 50 auth.log
+  113  tail -f 50 auth.log
+  114  history
+  115  ls
+  116  cd /
+  117  ls
+  118  cdbin
+  119  cd bin
+  120  java -jar jenkins.war --httpPort=8082
+  121  java --version
+  122  sudo update
+  123  sudo apt update
+  124  java -jar jenkins.war --httpPort=8082
+  125  cd ~/Downloads
+  126  cd ..
+  127  cd ~/Downloads
+  128  cd ..
+  129  cd /
+  130  cd ~
+  131  cd ~/Downloads
+  132  cd .
+  133  cd ..
+  134  ssh bandit0@bandit.labs.overthewire.org -pbandit0 2220
+  135  ssh bandit0@bandit.labs.overthewire.org -p 2220
+  136  ssh bandit1@bandit.labs.overthewire.org -p 2220
+  137  ssh bandit2@bandit.labs.overthewire.org -p 2220
+  138  ssh bandit3@bandit.labs.overthewire.org -p 2220
+  139  ssh bandit4@bandit.labs.overthewire.org -p 2220
+  140  ssh bandit5@bandit.labs.overthewire.org -p 2220
+  141  ssh bandit6@bandit.labs.overthewire.org -p 2220
+  142  history
