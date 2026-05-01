@@ -1,0 +1,178 @@
+https://github.com/CloudDevOpsHub/batch-43/blob/main/jenkins%20instakkations
+
+
+9 11 17 23  27 28 30
+
+Approach 4 :- Install Jenkins On Ubuntu    (this is production / real time approach)
+
+This installation is specific to systems operating on Ubuntu.   Follow the below steps:  https://www.jenkins.io/doc/book/installing/linux/ 
+Step 1: Install Java                           
+
+
+sudo apt update                
+java -version
+
+sudo apt install openjdk-21-jdk -y            
+
+
+Step 2: Add Jenkins Repository i.e key
+
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+
+
+Step 3: Add Jenkins repo to the system i.e source list
+
+
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"  https://pkg.jenkins.io/debian-stable binary/ | sudo tee  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+Step 4: Install Jenkins
+sudo apt update
+sudo apt install jenkins
+Step 5: Verify installation
+
+
+systemctl status jenkins
+
+Step 6: Once Jenkins is up and running, access it from the
+link: http://localhost:8080    or the IP of virtual machine like xx.xx.xx.xx:8080
+
+Get the initial admin pwd from command  cat /var/lib/jenkins/secrets/initialAdminPassword
+Start, Stop & Restart Jenkins
+$ sudo service jenkins restart
+$ sudo service jenkins stop
+$ sudo service jenkins start
+
+
+-----------
+
+https://plugins.jenkins.io/role-strategy/
+
+
+https://github.com/DevSecOpsG/helloworldsimplejavaprogram
+
+Jenkins 2.555.1
+
+https://updates.jenkins.io/download/war/
+
+java -jar jenkins.war --httpPort=8082
+
+
+install 
+apt-get install maven
+
+
+https://github.com/CloudDevOpsHub/javaspringboot-ecommerce/tree/main
+
+--
+
+Build Timeout
+Credentials Plugin    This plugin allows you to store credentials in Jenkins.
+Dark Theme  Adds a dark theme to Jenkins, respecting browser and OS themes if configured.
+Git client plugin  Utility plugin for Git support in Jenkins
+Github plugin  This plugin integrates Git with Jenkins.
+Gradle Plugin This plugin allows Jenkins to invoke Gradle build scripts directly.
+Pipeline  groovy 
+A suite of plugins that lets you orchestrate automation, simple or complex. See Pipeline as Code with Jenkins for more details.
+Pipeline Graph View Plugin Provides "Pipeline Graph" visualization of a pipeline job run.
+
+
+----------installed 
+
+DockerVersion
+1316.v75635a_002b_0a_
+Cloud Providers
+Cluster Management
+docker
+Provisions Jenkins agents on demand as Docker containers. Runs builds in isolated, disposable environments.
+1 mo 27 days ago	
+100
+
+Docker PipelineVersion
+634.vedc7242b_eda_7
+pipeline
+DevOps
+Deployment
+docker
+Build and use Docker containers from pipelines.
+This plugin is up for adoption! We are looking for new maintainers. Visit our Adopt a Plugin initiative for more information.
+6 mo 15 days ago	
+76
+
+SonarQube ScannerVersion
+2.18.2
+External Site/Tool Integrations
+Build Reports
+This plugin allows an easy integration of SonarQube, the open source platform for Continuous Inspection of code quality.
+4 mo 16 days ago	
+84
+
+Sonar Quality GatesVersion
+364.v67a_f255f340f
+Library plugins (for use by other plugins)
+analysis
+Other Post-Build Actions
+Fails the build whenever the Quality Gates criteria in the Sonar 5.6+ analysis aren't met (the project Quality Gates status is different than "Passed")
+4 mo 10 days ago	
+100
+
+Maven IntegrationVersion
+3.27
+Build Tools
+This plugin provides a deep integration between Jenkins and Maven. It adds support for automatic triggers between projects depending on SNAPSHOTs as well as the automated configuration of various Jenkins publishers such as Junit.
+8 mo 18 days ago	
+97
+
+SplunkVersion
+1.11.2
+Build Notifiers
+Build Reports
+Other Post-Build Actions
+Splunk plugin for Jenkins provides deep insights into your Jenkins controller and agent infrastructure, job and build details such as console logs, status, artifacts, and an incredibly efficient way to analyze test results.
+
+////
+pipeline {
+agent any
+    stages {
+        stage('Git clone') {
+            steps {
+            git branch: 'main', url: 'https://github.com/DevSecOpsG/helloworldsimplejavaprogram'
+            }
+        }
+        stage('Build'){
+            steps{
+            sh 'javac helloworld.java'
+            }
+        }
+        stage('Run'){
+            steps{
+            sh 'java Simple'
+            }
+        }
+    }
+}
+
+
+////
+
+pipeline {
+    agent any
+    stages {
+        stage('Git clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/CloudDevOpsHub/javaspringboot-ecommerce'
+            }
+        }
+        stage('mvn build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+        stage('run springboot') {
+            steps {
+                sh 'java -jar ./target/Shopping_Cart-0.0.1-SNAPSHOT.jar &'
+            }
+        }
+    }
+}
+
