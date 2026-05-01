@@ -1,0 +1,66 @@
+create vm on gcp
+////
+    
+1>curl -fsSL https://get.docker.com -o install-docker.sh
+sudo sh install-docker.sh
+
+///
+curl -fsSL https://get.docker.com -o install-docker.sh
+    2  sudo sh install-docker.sh
+    3  docker -v
+    4  docker ps
+    5  docker pull ubuntu
+    6  docker images
+    7  docker pull hello-world
+    8  docker ps
+    9  docker images
+    
+///
+2> sudo apt-get update
+sudo apt install docker.io -y
+docker run -d --name amaaaaan -p 80:80 nginx    
+
+///create file in docker
+mkdir -p ~/docker-nginx/html
+cd ~/docker-nginx/html
+vi index.html
+    
+    
+    docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+    for i in {1..30}; do docker run -d --rm alpine sleep 1000; done
+    
+    docker run -it centos:7
+    2  curl -fsSL https://get.docker.com -o install-docker.sh
+    3  sudo sh install-docker.sh
+    4  docker pull ubuntu
+    5  docker images
+    6  docker pull centos
+    7  docker pull cent-os
+    8  docker pull alpine
+    9  docker image
+   10  docker images
+   11  apt-get update
+   12  docker run nginx
+   13  docker run -d --name sam -p 80:80  nginx
+   14  mkdir -p ~/docker-nginx/html
+   15  cd ~/docker-nginx/html/
+   16  vi index.html
+  
+  117  docker run --name sam -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+  118  docker run ubuntu
+  119  docker ps
+  120  docket run -it ubuntu
+  121  docker run -it ubuntu
+  122  docker ps
+  123  nano index.html 
+  124  rm index.html 
+  125  vi index.html
+  126  docker ps
+  127  rm index.html 
+  128  vi index.html
+  129  history
+  
+  
+  /// jenkin container
+  
+  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
