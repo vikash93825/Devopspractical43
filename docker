@@ -1,5 +1,3 @@
-Here’s a clean, professional **GitHub documentation (README.md)** for your Docker + Jenkins setup project. You can directly paste this into your repo 👇
-
 ---
 
 # 🚀 Docker & Jenkins Setup on GCP VM
@@ -174,5 +172,3 @@ docker logs <container_id>
 **Vikash Kumar**
 
 ---
-
-Just tell me 👍
