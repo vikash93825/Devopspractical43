@@ -1,66 +1,178 @@
-create vm on gcp
-////
-    
-1>curl -fsSL https://get.docker.com -o install-docker.sh
-sudo sh install-docker.sh
+Here’s a clean, professional **GitHub documentation (README.md)** for your Docker + Jenkins setup project. You can directly paste this into your repo 👇
 
-///
+---
+
+# 🚀 Docker & Jenkins Setup on GCP VM
+
+This project demonstrates **Docker installation, container management, NGINX deployment, and Jenkins setup** on a GCP Virtual Machine.
+
+---
+
+## ☁️ Step 1: Create VM on GCP
+
+* Go to Google Cloud Platform
+* Create a VM instance (Ubuntu recommended)
+* Allow **HTTP (80)** and **Custom ports (8080 for Jenkins)**
+
+---
+
+## 🐳 Step 2: Install Docker
+
+### Method 1: Using Script
+
+```bash
 curl -fsSL https://get.docker.com -o install-docker.sh
-    2  sudo sh install-docker.sh
-    3  docker -v
-    4  docker ps
-    5  docker pull ubuntu
-    6  docker images
-    7  docker pull hello-world
-    8  docker ps
-    9  docker images
-    
-///
-2> sudo apt-get update
-sudo apt install docker.io -y
-docker run -d --name amaaaaan -p 80:80 nginx    
+sudo sh install-docker.sh
+```
 
-///create file in docker
+### Method 2: Using APT
+
+```bash
+sudo apt-get update
+sudo apt install docker.io -y
+```
+
+### Verify Installation
+
+```bash
+docker -v
+docker ps
+```
+
+---
+
+## 📦 Step 3: Basic Docker Commands
+
+```bash
+docker pull ubuntu
+docker pull hello-world
+docker images
+docker ps
+```
+
+---
+
+## 🌐 Step 4: Run NGINX Container
+
+```bash
+docker run -d --name vikash -p 80:80 nginx
+```
+
+👉 Access in browser:
+
+```
+http://<VM-IP>
+```
+
+---
+
+## 📁 Step 5: Create Custom HTML Page
+
+```bash
 mkdir -p ~/docker-nginx/html
 cd ~/docker-nginx/html
 vi index.html
-    
-    
-    docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
-    for i in {1..30}; do docker run -d --rm alpine sleep 1000; done
-    
-    docker run -it centos:7
-    2  curl -fsSL https://get.docker.com -o install-docker.sh
-    3  sudo sh install-docker.sh
-    4  docker pull ubuntu
-    5  docker images
-    6  docker pull centos
-    7  docker pull cent-os
-    8  docker pull alpine
-    9  docker image
-   10  docker images
-   11  apt-get update
-   12  docker run nginx
-   13  docker run -d --name sam -p 80:80  nginx
-   14  mkdir -p ~/docker-nginx/html
-   15  cd ~/docker-nginx/html/
-   16  vi index.html
-  
-  117  docker run --name sam -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
-  118  docker run ubuntu
-  119  docker ps
-  120  docket run -it ubuntu
-  121  docker run -it ubuntu
-  122  docker ps
-  123  nano index.html 
-  124  rm index.html 
-  125  vi index.html
-  126  docker ps
-  127  rm index.html 
-  128  vi index.html
-  129  history
-  
-  
-  /// jenkin container
-  
-  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+```
+
+### Sample HTML
+
+```html
+<h1>Hello Vikash 🚀</h1>
+<p>This is running inside Docker NGINX</p>
+```
+
+---
+
+## 🔗 Step 6: Mount Volume to NGINX
+
+```bash
+docker run --name docker-nginx -p 80:80 -d \
+-v ~/docker-nginx/html:/usr/share/nginx/html nginx
+```
+
+👉 Now your custom HTML is served via NGINX
+
+---
+
+## ⚡ Step 7: Run Multiple Containers (Testing)
+
+```bash
+for i in {1..30}; do docker run -d --rm alpine sleep 1000; done
+```
+
+---
+
+## 🐧 Step 8: Run Interactive Containers
+
+```bash
+docker run -it ubuntu
+docker run -it centos:7
+```
+
+---
+
+## ⚙️ Step 9: Jenkins Setup in Docker
+
+Run Jenkins container:
+
+```bash
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+```
+
+👉 Access Jenkins:
+
+```
+http://<VM-IP>:8080
+```
+
+---
+
+## 🔑 Get Jenkins Initial Password
+
+```bash
+docker ps
+docker exec -it <container_id> cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+---
+
+## 📊 Useful Commands
+
+```bash
+docker images
+docker ps -a
+docker stop <container_id>
+docker start <container_id>
+docker rm <container_id>
+docker logs <container_id>
+```
+
+---
+
+## 🧠 Key Learnings
+
+* Container lifecycle management
+* Port mapping (`-p`)
+* Volume mounting (`-v`)
+* Running multiple containers
+* Deploying applications using Docker
+* Running CI/CD tool like Jenkins in container
+
+---
+
+## 🛠️ Tech Stack
+
+* Docker
+* NGINX
+* Jenkins
+* Google Cloud Platform
+
+---
+
+## 📌 Author
+
+**Vikash Kumar**
+
+---
+
+Just tell me 👍
