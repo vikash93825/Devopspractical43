@@ -1,8 +1,5 @@
 https://github.com/CloudDevOpsHub/batch-43/blob/main/jenkins%20instakkations
 
-
-9 11 17 23  27 28 30
-
 Approach 4 :- Install Jenkins On Ubuntu    (this is production / real time approach)
 
 This installation is specific to systems operating on Ubuntu.   Follow the below steps:  https://www.jenkins.io/doc/book/installing/linux/ 
