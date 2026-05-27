@@ -129,3 +129,11 @@ vi  installnginx.yaml
   tasks:
     - name: ensure nginx is at the latest version
       apt: name=nginx state=latest
+
+ansible-playbook installnginx.yaml
+
+--------
+ansible-galaxy init rajivnginx
+tree rajivnginx
+apt install tree
+tree rajivnginx
